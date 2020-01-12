@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Php\\Php\\" : "src"
+		}
+	},
+	"name" : "php/php",
+	"require" : {
+		"php" : ">=5.6"
+	}
+}
