@@ -1,7 +1,7 @@
 {
 	"autoload" : {
 		"psr-4" : {
-			"Php\\Php\\" : "src"
+			"" : "src"
 		}
 	},
 	"name" : "php/php",
