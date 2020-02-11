@@ -2,7 +2,6 @@
 
 class CalledClass
 {
-
     public function calledMethod(?string $val): ?string
     {
         return $val;
