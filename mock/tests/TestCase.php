@@ -3,9 +3,8 @@
 class TestCase extends PHPUnit\Framework\TestCase
 {
 
-    protected function tearDown()
+    protected function success()
     {
-        parent::tearDown();
         $this->assertTrue(true);
     }
 }

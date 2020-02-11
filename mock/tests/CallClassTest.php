@@ -57,6 +57,7 @@ class CallClassTest extends TestCase
     public function test_callTwice()
     {
         $this->callClass->callTwice();
+        $this->success();
     }
 }
 
