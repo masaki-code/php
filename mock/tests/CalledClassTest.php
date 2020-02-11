@@ -42,4 +42,3 @@ class CalledClassTest extends TestCase
         return $data;
     }
 }
-

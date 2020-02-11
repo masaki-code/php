@@ -59,4 +59,3 @@ class CallClassTest extends TestCase
         $this->success();
     }
 }
-
