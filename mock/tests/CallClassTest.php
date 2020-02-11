@@ -80,4 +80,25 @@ class CallClassTest extends TestCase
 
         return $data;
     }
+
+    /**
+     *
+     * @test
+     * @dataProvider callTwoArgDataProvider
+     */
+    public function test_callTwoArgTwice($val_1, $val_2)
+    {
+        $this->callClass->callTwoArgTwice($val_1, $val_2);
+        $this->success();
+    }
+
+    public function callTwoArgTwiceDataProvider()
+    {
+        $data = [];
+        $data['null / null'] = [null, null];
+        $data['通常 / null'] = ['hoge', null];
+        $data['null / 通常'] = [null, 'fuga'];
+        $data['通常 / 通常'] = ['hoge', 'fuga'];
+        return $data;
+    }
 }
