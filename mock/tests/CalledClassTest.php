@@ -41,4 +41,26 @@ class CalledClassTest extends TestCase
 
         return $data;
     }
+
+    /**
+     *
+     * @test
+     * @dataProvider calledMethodTwoArgDataProvider
+     */
+    public function test_calledMethodTwoArg($val_1, $val_2, $expected)
+    {
+        $this->assertEquals($expected, $this->target->calledMethodTwoArg($val_1, $val_2));
+    }
+
+    public function calledMethodTwoArgDataProvider()
+    {
+        $data = [];
+
+        $data['null / null'] = [null, null, ','];
+        $data['通常 / null'] = ['hoge', null, 'hoge,'];
+        $data['null / 通常'] = [null, 'fuga', ',fuga'];
+        $data['通常 / 通常'] = ['hoge', 'fuga', 'hoge,fuga'];
+
+        return $data;
+    }
 }

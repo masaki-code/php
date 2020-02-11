@@ -3,14 +3,13 @@
 class CalledClass
 {
 
-    /**
-     *
-     * @var string
-     */
-    private $value;
-
     public function calledMethod(?string $val): ?string
     {
-        return $this->value = $val;
+        return $val;
+    }
+
+    public function calledMethodTwoArg(?string $val1, ?string $val2): string
+    {
+        return $val1 . ',' . $val2;
     }
 }

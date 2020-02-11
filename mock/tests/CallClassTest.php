@@ -58,4 +58,26 @@ class CallClassTest extends TestCase
         $this->callClass->callTwice();
         $this->success();
     }
+
+    /**
+     *
+     * @test
+     * @dataProvider callTwoArgDataProvider
+     */
+    public function test_calledMethodTwoArg($val_1, $val_2, $expected)
+    {
+        $this->assertEquals($expected, $this->callClass->callTwoArg($val_1, $val_2));
+    }
+
+    public function callTwoArgDataProvider()
+    {
+        $data = [];
+
+        $data['null / null'] = [null, null, ','];
+        $data['通常 / null'] = ['hoge', null, 'hoge,'];
+        $data['null / 通常'] = [null, 'fuga', ',fuga'];
+        $data['通常 / 通常'] = ['hoge', 'fuga', 'hoge,fuga'];
+
+        return $data;
+    }
 }

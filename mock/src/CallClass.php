@@ -28,4 +28,9 @@ class CallClass
         $this->called->calledMethod('one');
         $this->called->calledMethod('two');
     }
+
+    public function callTwoArg(?string $val1, ?string $val2): string
+    {
+        return $this->called->calledMethodTwoArg($val1, $val2);
+    }
 }
