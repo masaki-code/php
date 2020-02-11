@@ -1,0 +1,9 @@
+.settings
+.buildpath
+.project
+*.swp
+.php_cs.cache
+vendor/
+build/
+phpunit.xml
+.phpunit.result.cache
