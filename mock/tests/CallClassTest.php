@@ -52,7 +52,6 @@ class CallClassTest extends TestCase
     /**
      *
      * @test
-     * @doesNotPerformAssertions
      */
     public function test_callTwice()
     {
