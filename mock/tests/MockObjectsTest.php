@@ -42,4 +42,24 @@ class MockObjectsTest extends TestCase
 
         $target->callTwice();
     }
+
+    /**
+     * モックオブジェクトを使って複数引数の受け渡しができていることを検証するテスト
+     *
+     * @test
+     */
+    public function test_callTwoArg()
+    {
+        $arg_1 = 'hoge';
+        $arg_2 = 'fuga';
+
+        $called = $this->createMock(CalledClass::class);
+        $called->expects($this->once())
+            ->method('calledMethodTwoArg')
+            ->with($this->equalTo($arg_1), $this->equalTo($arg_2));
+
+        $target = new CallClass($called);
+
+        $target->callTwoArg($arg_1, $arg_2);
+    }
 }
